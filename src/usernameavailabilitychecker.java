@@ -20,6 +20,21 @@ public class Main {
 
             return suggestions;
         }
+        public String getMostAttempted(){
+
+            String maxUser="";
+            int max=0;
+
+            for(String user : attempts.keySet()){
+
+                if(attempts.get(user) > max){
+                    max = attempts.get(user);
+                    maxUser = user;
+                }
+            }
+
+            return maxUser;
+        }
 
     }
 
@@ -27,6 +42,13 @@ public class Main {
 
         UsernameChecker system = new UsernameChecker();
         System.out.println("Username Checker Started");
+        UsernameChecker system = new UsernameChecker();
+
+        System.out.println(system.checkAvailability("john"));
+
+        System.out.println(system.suggestAlternatives("john"));
+
+        System.out.println(system.getMostAttempted());
 
     }
 }
