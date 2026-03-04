@@ -10,6 +10,16 @@ public class Main {
         public boolean checkAvailability(String username){
             return !users.containsKey(username);
         }
+        public List<String> suggestAlternatives(String username){
+
+            List<String> suggestions = new ArrayList<>();
+
+            suggestions.add(username + "1");
+            suggestions.add(username + "2");
+            suggestions.add(username + "3");
+
+            return suggestions;
+        }
 
     }
 
