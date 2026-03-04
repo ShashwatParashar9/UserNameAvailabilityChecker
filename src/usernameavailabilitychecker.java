@@ -7,6 +7,10 @@ public class Main {
         HashMap<String,Integer> users = new HashMap<>();
         HashMap<String,Integer> attempts = new HashMap<>();
 
+        public boolean checkAvailability(String username){
+            return !users.containsKey(username);
+        }
+
     }
 
     public static void main(String[] args) {
