@@ -17,6 +17,7 @@ public class Main {
 
         UsernameChecker system = new UsernameChecker();
         System.out.println("Username Checker Started");
+        System.out.println(system.checkAvailability("john"));
 
     }
 }
